@@ -1,10 +1,12 @@
 from PySide6 import QtWidgets
 
-from controllers.main_ctrl import MainWindow_controller
+from controllers.mainCtrl import mainWindowController
 
 if __name__ == '__main__':
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    window = MainWindow_controller()
+    # fusion風格
+    app.setStyle(QtWidgets.QStyleFactory.create("Fusion"))
+    window = mainWindowController()
     window.show()
     sys.exit(app.exec())
