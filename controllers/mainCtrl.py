@@ -8,8 +8,32 @@ class mainWindowController(QtWidgets.QMainWindow):
         super().__init__()  # in python3, super(Class, self).xxx = super().xxx
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.ui.pushButton.clicked.connect(self.the_button_was_clicked)
+        self.ui.BtnMaterialCalculation.clicked.connect(
+            self.screenChange)
+        self.ui.BtnMaterialSettings.clicked.connect(
+            self.screenChange)
+        self.ui.BtnCustomerQuotation.clicked.connect(
+            self.screenChange)
+        self.ui.BtnQuotationSummary.clicked.connect(
+            self.screenChange)
+        self.ui.BtnCustomerOrder.clicked.connect(
+            self.screenChange)
+        self.ui.BtnOrderSummary.clicked.connect(
+            self.screenChange)
+        self.ui.BtnSupplierInquiry.clicked.connect(
+            self.screenChange)
+        self.ui.BtnSupplierSummary.clicked.connect(
+            self.screenChange)
+        self.ui.BtnSupplierPurchasing.clicked.connect(
+            self.screenChange)
+        self.ui.BtnPurchaseSummary.clicked.connect(
+            self.screenChange)
+        self.ui.BtnWarehouseManagement.clicked.connect(
+            self.screenChange)
+        self.ui.BtnCustomerSummary.clicked.connect(
+            self.screenChange)
 
-    def the_button_was_clicked(self):
+    def screenChange(self):
         from main import main
-        main.showMaterialCalculation(self)
+        objectName = self.sender().objectName()
+        main.entryChanged(self, objectName)

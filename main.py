@@ -7,16 +7,15 @@ class main():
     def __init__(self):
         super().__init__()  # in python3, super(Class, self).xxx = super().xxx
 
-    def showMaterialCalculation(self):
-        print('showMaterialCalculation')
-        self.window = materialCalculationController()
-        self.window.show()
-
-    def showMainWindow(self):
-        print('showMainWindow')
-        self.window = mainWindowController()
-        self.window.show()
-        app.exec()
+    def entryChanged(self, objectName='default'):
+        print('entryChanged:' + objectName)
+        if(objectName == 'default'):
+            self.window = mainWindowController()
+            self.window.show()
+            app.exec()
+        elif(objectName == 'BtnMaterialCalculation'):
+            self.window = materialCalculationController()
+            self.window.show()
 
 
 if __name__ == '__main__':
@@ -24,5 +23,5 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     # fusion風格
     app.setStyle(QtWidgets.QStyleFactory.create("Fusion"))
-    main().showMainWindow()
+    main().entryChanged()
     sys.exit()
