@@ -8,6 +8,9 @@ class mainWindowController(QtWidgets.QMainWindow):
         super().__init__()  # in python3, super(Class, self).xxx = super().xxx
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        # MainWindow Title
+        self.setWindowTitle("宏帛ERP")
+
         self.ui.BtnMaterialCalculation.clicked.connect(
             self.screenChange)
         self.ui.BtnMaterialSettings.clicked.connect(
