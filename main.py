@@ -1,6 +1,7 @@
 from PySide6 import QtWidgets
 from controllers.mainCtrl import mainWindowController
 from controllers.materialCalculationCtrl import materialCalculationController
+from controllers.contactsCtrl import contactsController
 
 
 class main():
@@ -15,6 +16,9 @@ class main():
             app.exec()
         elif(objectName == 'BtnMaterialCalculation'):
             self.window = materialCalculationController()
+            self.window.show()
+        elif(objectName == 'BtnCustomerSummary'):
+            self.window = contactsController()
             self.window.show()
 
 
