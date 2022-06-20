@@ -12,11 +12,9 @@ class materialCalculation():
         if(Type == "MaterialList"):
             return ['SS400', 'S150C', 'S45C', 'SCM415(SCM21)', 'SCM440(SCM4)']
         elif(Type == "styleList"):
-            return ['圓柱', '方管', '鋁擠型', '中空圓管']
-        elif(Type == "styleList_D"):
+            return ['圓棒', '圓管', '六角棒', '鈑材']
+        elif(Type == "styleSize"):
             return ['10', '20', '30', '40']
-        elif(Type == "styleList_d"):
-            return ['5', '10', '15', '20']
 
     def getstyleImage(Style):
         pixmap = QtGui.QPixmap('resources\\img\\styleImage.png')
