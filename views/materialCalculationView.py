@@ -3,15 +3,21 @@
 ################################################################################
 ## Form generated from reading UI file 'materialCalculationView.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.0
+## Created by: Qt User Interface Compiler version 6.3.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *
-from PySide6.QtGui import *
-from PySide6.QtWidgets import *
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QLabel, QLineEdit,
+    QMainWindow, QMenuBar, QSizePolicy, QStatusBar,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -46,19 +52,23 @@ class Ui_MainWindow(object):
         self.label_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.material_ComboBox = QComboBox(self.styleWidget)
         self.material_ComboBox.setObjectName(u"material_ComboBox")
-        self.material_ComboBox.setGeometry(QRect(150, 5, 80, 30))
+        self.material_ComboBox.setGeometry(QRect(150, 5, 200, 30))
+        self.material_ComboBox.setFont(font)
         self.style_ComboBox = QComboBox(self.styleWidget)
         self.style_ComboBox.setObjectName(u"style_ComboBox")
-        self.style_ComboBox.setGeometry(QRect(150, 45, 80, 30))
+        self.style_ComboBox.setGeometry(QRect(150, 45, 200, 30))
+        self.style_ComboBox.setFont(font)
         self.specTypeA = QWidget(self.specWidget)
         self.specTypeA.setObjectName(u"specTypeA")
         self.specTypeA.setGeometry(QRect(0, 80, 400, 120))
         self.typeA_ComboBox_1 = QComboBox(self.specTypeA)
         self.typeA_ComboBox_1.setObjectName(u"typeA_ComboBox_1")
-        self.typeA_ComboBox_1.setGeometry(QRect(150, 5, 80, 30))
+        self.typeA_ComboBox_1.setGeometry(QRect(150, 5, 200, 30))
+        self.typeA_ComboBox_1.setFont(font)
         self.typeA_LineEdit_1 = QLineEdit(self.specTypeA)
         self.typeA_LineEdit_1.setObjectName(u"typeA_LineEdit_1")
-        self.typeA_LineEdit_1.setGeometry(QRect(150, 45, 80, 30))
+        self.typeA_LineEdit_1.setGeometry(QRect(150, 45, 200, 30))
+        self.typeA_LineEdit_1.setFont(font)
         self.typeA_Label_1 = QLabel(self.specTypeA)
         self.typeA_Label_1.setObjectName(u"typeA_Label_1")
         self.typeA_Label_1.setGeometry(QRect(0, 0, 150, 40))
@@ -80,7 +90,7 @@ class Ui_MainWindow(object):
         self.label_4.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.density_Label = QLabel(self.specWidget)
         self.density_Label.setObjectName(u"density_Label")
-        self.density_Label.setGeometry(QRect(150, 205, 80, 30))
+        self.density_Label.setGeometry(QRect(150, 205, 200, 30))
         self.density_Label.setFont(font)
         self.density_Label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.specTypeB = QWidget(self.specWidget)
@@ -88,13 +98,16 @@ class Ui_MainWindow(object):
         self.specTypeB.setGeometry(QRect(0, 80, 400, 120))
         self.typeB_ComboBox_2 = QComboBox(self.specTypeB)
         self.typeB_ComboBox_2.setObjectName(u"typeB_ComboBox_2")
-        self.typeB_ComboBox_2.setGeometry(QRect(150, 45, 80, 30))
+        self.typeB_ComboBox_2.setGeometry(QRect(150, 45, 200, 30))
+        self.typeB_ComboBox_2.setFont(font)
         self.typeB_ComboBox_1 = QComboBox(self.specTypeB)
         self.typeB_ComboBox_1.setObjectName(u"typeB_ComboBox_1")
-        self.typeB_ComboBox_1.setGeometry(QRect(150, 5, 80, 30))
+        self.typeB_ComboBox_1.setGeometry(QRect(150, 5, 200, 30))
+        self.typeB_ComboBox_1.setFont(font)
         self.typeB_LineEdit_1 = QLineEdit(self.specTypeB)
         self.typeB_LineEdit_1.setObjectName(u"typeB_LineEdit_1")
-        self.typeB_LineEdit_1.setGeometry(QRect(150, 85, 80, 30))
+        self.typeB_LineEdit_1.setGeometry(QRect(150, 85, 200, 30))
+        self.typeB_LineEdit_1.setFont(font)
         self.typeB_Label_1 = QLabel(self.specTypeB)
         self.typeB_Label_1.setObjectName(u"typeB_Label_1")
         self.typeB_Label_1.setGeometry(QRect(0, 0, 150, 40))
@@ -115,10 +128,12 @@ class Ui_MainWindow(object):
         self.specTypeC.setGeometry(QRect(0, 80, 400, 120))
         self.typeC_ComboBox_1 = QComboBox(self.specTypeC)
         self.typeC_ComboBox_1.setObjectName(u"typeC_ComboBox_1")
-        self.typeC_ComboBox_1.setGeometry(QRect(150, 5, 80, 30))
+        self.typeC_ComboBox_1.setGeometry(QRect(150, 5, 200, 30))
+        self.typeC_ComboBox_1.setFont(font)
         self.typeC_LineEdit_2 = QLineEdit(self.specTypeC)
         self.typeC_LineEdit_2.setObjectName(u"typeC_LineEdit_2")
-        self.typeC_LineEdit_2.setGeometry(QRect(150, 85, 80, 30))
+        self.typeC_LineEdit_2.setGeometry(QRect(150, 85, 200, 30))
+        self.typeC_LineEdit_2.setFont(font)
         self.typeC_Label_1 = QLabel(self.specTypeC)
         self.typeC_Label_1.setObjectName(u"typeC_Label_1")
         self.typeC_Label_1.setGeometry(QRect(0, 0, 150, 40))
@@ -136,7 +151,8 @@ class Ui_MainWindow(object):
         self.typeC_Label_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.typeC_LineEdit_1 = QLineEdit(self.specTypeC)
         self.typeC_LineEdit_1.setObjectName(u"typeC_LineEdit_1")
-        self.typeC_LineEdit_1.setGeometry(QRect(150, 45, 80, 30))
+        self.typeC_LineEdit_1.setGeometry(QRect(150, 45, 200, 30))
+        self.typeC_LineEdit_1.setFont(font)
         self.label_5 = QLabel(self.specWidget)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setGeometry(QRect(0, 240, 150, 40))
@@ -149,15 +165,14 @@ class Ui_MainWindow(object):
         self.label_6.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.unitPrice_Label = QLabel(self.specWidget)
         self.unitPrice_Label.setObjectName(u"unitPrice_Label")
-        self.unitPrice_Label.setGeometry(QRect(150, 245, 80, 30))
+        self.unitPrice_Label.setGeometry(QRect(150, 245, 200, 30))
         self.unitPrice_Label.setFont(font)
         self.unitPrice_Label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.total_Label = QLabel(self.specWidget)
         self.total_Label.setObjectName(u"total_Label")
-        self.total_Label.setGeometry(QRect(150, 285, 80, 30))
+        self.total_Label.setGeometry(QRect(150, 285, 200, 30))
         self.total_Label.setFont(font)
         self.total_Label.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
-        self.specTypeC.raise_()
         self.styleWidget.raise_()
         self.label_4.raise_()
         self.density_Label.raise_()
@@ -167,6 +182,7 @@ class Ui_MainWindow(object):
         self.label_6.raise_()
         self.unitPrice_Label.raise_()
         self.total_Label.raise_()
+        self.specTypeC.raise_()
         self.specWidgit = QWidget(self.centralwidget)
         self.specWidgit.setObjectName(u"specWidgit")
         self.specWidgit.setGeometry(QRect(460, 30, 550, 650))
