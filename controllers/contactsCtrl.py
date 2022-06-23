@@ -1,6 +1,6 @@
 from PySide6 import QtWidgets, QtGui, QtCore
 
-from views.contactsView import Ui_MainWindow
+from resources.views.contactsView import Ui_MainWindow
 
 
 class contactsController(QtWidgets.QMainWindow):

@@ -1,6 +1,6 @@
 from PySide6 import QtWidgets, QtGui, QtCore
 
-from views.mainView import Ui_MainWindow
+from resources.views.mainView import Ui_MainWindow
 
 
 class mainWindowController(QtWidgets.QMainWindow):

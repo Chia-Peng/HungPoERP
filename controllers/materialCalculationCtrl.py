@@ -1,7 +1,7 @@
 import math
 from PySide6 import QtWidgets
 
-from views.materialCalculationView import Ui_MainWindow
+from resources.views.materialCalculationView import Ui_MainWindow
 from model.materialCalculation import materialCalculation
 from model.materialCalculation import materialType
 from model.pandasDataframe import pandasDataframe as pd
