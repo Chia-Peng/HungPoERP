@@ -4,6 +4,7 @@ from PySide6 import QtWidgets
 from views.materialCalculationView import Ui_MainWindow
 from model.materialCalculation import materialCalculation
 from model.materialCalculation import materialType
+from model.pandasDataframe import pandasDataframe as pd
 
 
 class materialCalculationController(QtWidgets.QMainWindow):
@@ -31,6 +32,18 @@ class materialCalculationController(QtWidgets.QMainWindow):
 
         self.cboMaterialChanged()
         self.cboStyleChanged()
+
+        file_path = 'resources\data'
+        file_name = '\dataSheet.xlsx'
+        # pd.Create(file_name)
+        df = pd.Read(file_path+file_name)
+
+        for i in range(1, df.columns.size):
+            t1 = df[df.columns[i]].values.tolist()
+            print(t1)
+
+        aa = pd.arrayFormat(t1)
+        self.ui.listWidget.addItems(aa)
 
     # 選擇材質
     def cboMaterialChanged(self):

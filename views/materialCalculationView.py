@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QLabel, QLineEdit,
-    QMainWindow, QMenuBar, QSizePolicy, QStatusBar,
-    QWidget)
+    QListWidget, QListWidgetItem, QMainWindow, QMenuBar,
+    QSizePolicy, QStatusBar, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -188,9 +188,12 @@ class Ui_MainWindow(object):
         self.specWidgit.setGeometry(QRect(460, 30, 550, 650))
         self.specList = QLabel(self.specWidgit)
         self.specList.setObjectName(u"specList")
-        self.specList.setGeometry(QRect(0, 0, 550, 650))
+        self.specList.setGeometry(QRect(0, 0, 550, 30))
         self.specList.setFont(font)
         self.specList.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.listWidget = QListWidget(self.specWidgit)
+        self.listWidget.setObjectName(u"listWidget")
+        self.listWidget.setGeometry(QRect(0, 30, 550, 600))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
